@@ -1,0 +1,25 @@
+<!-- Chatbot Container -->
+<div class="chatbot-container" [class.show]="isOpen">
+  <div class="chatbot-header">
+    <span>AI Assistant</span>
+    <button class="close-btn" (click)="toggleChatbot()">×</button>
+  </div>
+
+  <div class="chatbot-body">
+    <div *ngFor="let message of messages" class="chat-message" [ngClass]="{'user': message.sender === 'user', 'assistant': message.sender === 'assistant'}">
+      <span class="message-text">{{ message.text }}</span>
+    </div>
+  </div>
+
+  <div class="chatbot-footer">
+    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Ask me anything..." />
+    <button class="send-btn" (click)="sendMessage()">
+      <i class="fa fa-paper-plane"></i> <!-- Telegram-like send icon -->
+    </button>
+  </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button class="chatbot-toggle" (click)="toggleChatbot()">
+  <img src="/assets/icons/ai_circle.png" alt="Chatbot">
+</button>

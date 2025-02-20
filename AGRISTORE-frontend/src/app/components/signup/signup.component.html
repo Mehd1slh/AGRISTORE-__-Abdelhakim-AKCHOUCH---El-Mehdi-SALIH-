@@ -1,0 +1,47 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<div class="container">
+  <input type="checkbox" id="flip">
+  <div class="cover">
+    <div class="front">
+      <img src="/assets/images/farmer.png" alt="Cover Image">
+      <div class="text">
+        <span class="text-1">Join our agri community <br> with one step</span>
+        <span class="text-2">Let's get started</span>
+      </div>
+    </div>
+  </div>
+  <div class="forms">
+    <div class="form-content">
+      <div class="signup-form">
+        <div class="title">Signup</div>
+        <form (ngSubmit)="signup()" #signupForm="ngForm">
+          <div class="input-boxes">
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="Enter your first name" class="form-control mt-2" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Enter your last name" class="form-control mt-2" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" class="form-control mt-2" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" [(ngModel)]="password" name="password" placeholder="Enter your password" class="form-control mt-2" required>
+            </div>
+            <div class="button input-box">
+              <input type="submit" value="Submit">
+            </div>
+            <div class="text sign-up-text">Already have an account? <a class="nav-link" routerLink="/login">Login now</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>

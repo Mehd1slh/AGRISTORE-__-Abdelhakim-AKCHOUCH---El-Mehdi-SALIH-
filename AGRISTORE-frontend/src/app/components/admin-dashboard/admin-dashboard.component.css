@@ -1,0 +1,13 @@
+/* Admin Dashboard Layout Styling */
+.content {
+  margin-top: 40px;
+  height: auto;
+  margin-left: 230px; /* Adjust this value to match the sidebar width */
+  padding: 2rem;
+  width: calc(100% - 230px); /* Adjust width to account for the sidebar */
+}
+body{
+  background-color: #f5f8f1; /* Light background for the content area */
+
+}
+

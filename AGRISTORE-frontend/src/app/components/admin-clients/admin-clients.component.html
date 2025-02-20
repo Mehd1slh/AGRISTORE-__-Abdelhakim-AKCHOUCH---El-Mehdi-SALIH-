@@ -1,0 +1,77 @@
+<div class="container mt-4">
+  <h3>Manage Users</h3>
+  <p class="text-muted">Dashboard / Users</p>
+
+  <!-- Add User Button -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <button class="btn btn-success mb-3" (click)="openNew()">Add User</button>
+  </div>
+
+  <!-- Users Table -->
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.id }}</td>
+      <td>{{ client.firstName }}</td>
+      <td>{{ client.lastName }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.roles?.join(', ') }}</td>  <!-- Display roles as a string -->
+      <td>
+        <button class="btn btn-primary btn-sm" (click)="editClient(client)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="client.id ? deleteClient(client.id) : null">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- User Dialog (Form) -->
+  <div *ngIf="clientDialog" class="modal fade show d-block" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add User</h5>
+          <button type="button" class="btn-close" (click)="hideDialog()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" [(ngModel)]="newClient.firstName" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" [(ngModel)]="newClient.lastName" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="newClient.email" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="newClient.password" [disabled]="!!newClient.id" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Role</label>
+            <select class="form-select" [(ngModel)]="newClient.roles">
+              <option [value]="['CLIENT']">Client</option>
+              <option [value]="['ADMIN']">Admin</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" (click)="hideDialog()">Cancel</button>
+          <button class="btn btn-success" (click)="saveClient()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

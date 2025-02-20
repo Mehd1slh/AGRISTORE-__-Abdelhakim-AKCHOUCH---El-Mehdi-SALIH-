@@ -1,0 +1,31 @@
+/* Sidebar Styling */
+.sidebar {
+  margin-top: 30px;
+  min-height: 100vh;
+  width: 230px;
+  position: fixed;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  border-radius: 4px;
+  color: #336633; /* Dark green text color */
+  font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e8f0e6; /* Slightly lighter green on hover */
+  padding-left: 1.5rem;
+}
+
+.sidebar .nav-link.active {
+  background-color: #e8f0e6; /* Active link color */
+  font-weight: bold;
+}
+
+.sidebar h4 {
+  font-weight: 600;
+  color: #336633; /* Dark green text color */
+}

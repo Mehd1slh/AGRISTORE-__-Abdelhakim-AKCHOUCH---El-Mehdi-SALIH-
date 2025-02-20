@@ -1,0 +1,59 @@
+/* General Navbar Styles */
+.navbar {
+  background-color: #5f788a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* Adjust Logo */
+.navbar-brand img {
+  height: 40px;
+  margin: auto 30px ; /* Adjust space between logo and links */
+}
+
+/* Center Nav Items */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the navbar items */
+  flex-grow: 1; /* Makes items expand to fill space */
+}
+
+/* Space Between Nav Items */
+.nav-item {
+  padding: 0 15px;
+}
+
+/* Link Styling */
+.nav-link {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #7aa831;
+}
+
+/* Icon Alignment */
+.nav-link i {
+  margin-right: 8px;
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-item {
+    padding: 10px 0;
+  }
+}

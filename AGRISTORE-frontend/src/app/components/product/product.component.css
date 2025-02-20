@@ -1,0 +1,160 @@
+.product-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-height: 100%;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product-name {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1rem;
+}
+
+.old-price {
+  font-size: 0.9rem;
+}
+
+.new-price {
+  font-size: 1.2rem;
+}
+
+
+
+/* Dark Overlay Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: 2000; /* Ensure the overlay is above everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 16px; /* Rounded corners for the modal */
+  border: none;
+  background-color: #fff; /* White background for modal content */
+  color: #333; /* Dark text for better contrast */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee; /* Light border for header */
+  border-top-left-radius: 16px; /* Match modal border radius */
+  border-top-right-radius: 16px;
+}
+.modal-header .modal-title,
+.modal-header .btn-close{
+  margin: 1px 10px;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee; /* Light border for footer */
+  border-bottom-left-radius: 16px; /* Match modal border radius */
+  border-bottom-right-radius: 16px;
+}
+
+/* Product Image in Modal */
+.product-image-modal {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; /* Rounded corners for image container */
+}
+
+.product-image-modal img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  border-radius: 12px; /* Rounded corners for image */
+  object-fit: contain; /* Ensures the image fits within the container without distortion */
+}
+
+/* Product Details in Modal */
+.product-details-modal {
+  padding: 20px;
+}
+
+.product-details-modal h4 {
+  font-size: 1.5rem;
+  color: #333; /* Dark text for product name */
+}
+
+.product-details-modal p {
+  font-size: 1rem;
+  color: #666; /* Gray text for description */
+}
+
+.product-details-modal .form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px; /* Rounded corners for input field */
+  border: 1px solid #ddd; /* Light border for input */
+  background-color: #fff; /* White background for input */
+  color: #333; /* Dark text for input */
+}
+
+.product-details-modal .form-label {
+  font-size: 1rem;
+  color: #333; /* Dark text for label */
+}
+
+
+.btn-secondary {
+  background-color: dimgray;
+  border-color: dimgray;
+  border-radius: 8px; /* Rounded corners for buttons */
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: dimgray;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 8px; /* Rounded corners for buttons */
+}
+.btn-primary:hover {
+  background-color: white;
+  color: dodgerblue;
+  font-weight: bold;
+}

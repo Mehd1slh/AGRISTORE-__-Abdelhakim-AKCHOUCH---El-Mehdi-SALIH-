@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.container {
+  text-align: center;
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

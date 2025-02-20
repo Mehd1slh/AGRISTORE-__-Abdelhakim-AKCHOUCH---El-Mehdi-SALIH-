@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<div class="container">
+  <input type="checkbox" id="flip">
+  <div class="cover">
+    <div class="front">
+      <img src="/assets/images/agri-drone.jpg" alt="Cover Image">
+      <div class="text">
+        <span class="text-1">Every new farmer is a <br> new adventure</span>
+        <span class="text-2">Let's get connected</span>
+      </div>
+    </div>
+  </div>
+  <div class="forms">
+    <div class="form-content">
+      <div class="login-form">
+        <div class="title">Login</div>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+          <div class="input-boxes">
+
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" class="form-control" required>
+            </div>
+
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" [(ngModel)]="password" name="password" placeholder="Enter your password" class="form-control" required>
+            </div>
+
+            <div class="button input-box">
+              <input type="submit" value="Login">
+            </div>
+
+            <div class="text sign-up-text">Don't have an account?
+              <a class="nav-link" routerLink="/signup">Signup now</a>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>

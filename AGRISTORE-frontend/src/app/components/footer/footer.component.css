@@ -1,0 +1,76 @@
+.footer {
+  background-color: #5f788a; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-logo {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  max-width: 190px; /* Adjust logo size */
+  margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-subscribe,
+.footer-contact {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #7AA831; /* Button color */
+}
+
+.footer-subscribe input {
+  padding: 10px;
+  margin-top: 5px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+}
+
+.footer-subscribe button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #7AA831; /* Button color */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.footer-subscribe button:hover {
+  background-color: #ffffff;
+  color: #7AA831/* Darker green on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}

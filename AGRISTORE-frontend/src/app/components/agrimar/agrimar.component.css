@@ -1,0 +1,41 @@
+.agrimar-container {
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end; /* Center vertically */
+  height: 100vh; /* Set a height to the container */
+}
+
+
+.background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.visit {
+  display: inline-block;
+  padding: 12px 24px; /* Adjusted padding for buttons */
+  background-color: #052501; /* Green color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.visit:hover {
+  background-color: #7AA831; /* Darker green on hover */
+}
